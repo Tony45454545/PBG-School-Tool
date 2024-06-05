@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TB-Cloud</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TB-Cloud</h1>
+        <div class="form-group">
+            <label for="username">Benutzername:</label>
+            <input type="text" id="username" placeholder="Geben Sie Ihren Benutzernamen ein">
+            <label for="username">Wenn du neu bist schreibe uns doch eine email um auch einen link zu erhalten:</label>
+            <button id="createCloud">Cloud erstellen</button>
+        </div>
+        <div id="cloudLink" class="hidden">
+            <p>Ihr Cloud Link:</p>
+            <a id="link" href="#" target="_blank"></a>
+        </div>
+        <div id="uploadSection" class="hidden">
+            <h2>Dateien hochladen</h2>
+            <form id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="fileInput" multiple>
+                <button type="submit">Hochladen</button>
+            </form>
+            <div id="uploadedFiles"></div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
